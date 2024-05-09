@@ -1430,26 +1430,12 @@ DrawQuadT(-w, h, tx, ty+1/5.0f,
 
 void DrawMan()
 {
-int t = GetTickCount()/50%30;
-//if (man.run) 
-//{   man.x +=man.vx;  man.y +=man.vy;
-//
-//   float d = sqrt((man.x-man.tox)*(man.x-man.tox) + (man.y-man.toy)*(man.y-man.toy));
-//   if (d<0.1)
-//    {  man.run = false;  man.vx = 0;  man.vy = 0;  }
-//}
-DrawFrame(t);
-//glTranslated(2, 0, 0);
-//DrawFrame(t/2);
+	int t = GetTickCount64()/50%30;
+	DrawFrame(t);
 }
 
 void MouseDown(float x, float y)
 {
- //man.vx = (x-man.x)/2000;
- //man.vy = (y-man.y)/2000;
- //man.tox = x;
- //man.toy = y;
- //man.run = true;
 }
 
 void DrawIronMan()

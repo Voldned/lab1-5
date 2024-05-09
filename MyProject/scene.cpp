@@ -57,10 +57,6 @@ SCENE::~SCENE()
 
 void SCENE::InitLight()
 {
-  /* glShadeModel(GL_SMOOTH);
-   glMaterialfv(GL_FRONT,GL_SPECULAR,mat_specular);
-   glMaterialfv(GL_FRONT,GL_SHININESS,mat_shininess);
- */
    glLightfv(GL_LIGHT0,GL_DIFFUSE,white_light);
    
    glEnable(GL_LIGHTING);

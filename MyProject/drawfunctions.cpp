@@ -310,25 +310,6 @@ void InitOpenGL(int width, int height)
    glEnable(GL_BLEND);
    glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
    glEnable(GL_POINT_SMOOTH);
-
-   //InitBones();
-
-   //drawhouse
- // LoadHouseTextures(); 
-   
-   //drawsity
-   //LoadBMP(&texture[0], "dom2.bmp"); 
-   //LoadBMP(&texture[1], "Sky.bmp");
-   //LoadBMP(&texture[2], "Grass.bmp");
-  
-   //drawman
-   //InitMan();
-
-  // LoadBMP(&texture[0], "iron.bmp");
-
-//   BuildLists();
-  // BuildFont();
-   //BuildVERTEXFont();
 }
  
 void DrawPoint(float x, float y, float z, float r, float g, float b)
@@ -1497,59 +1478,6 @@ void DrawIronMan()
 
 void Draw()
 {
-
-	// lection 3
-   //DrawKube();
-   //DrawMoving1();
-   //DrawMoving2();
-   //DrawMoving3();
-   //DrawMoving4();
-   //DrawMoving5();
-
-//   glTranslated(0, 0, -5);
- //  DrawCamera1();
-
-//   DrawRound(0, 0, 10);
-	
-	//glLineWidth(5);
-
-	//lectoin 4
-	//DrawFuncMasExample();
-	//DrawFuncMasExample2();
-	//DrawFuncParam(5);
-	//DrawFuncParam2();
-
-	//DrawFunc3D(1);
-	//DrawFunc3D(2);
-	//DrawFunc3D(3);
-
-	//DrawBones();   //InitBones();
-
-	// lection 5
-	//DrawHome();
-	//DrawSity();
-//	DrawMan();
-
-  //DrawIronMan();
-
-
-	// lection 7
-      //DrawLists();
-	//DrawLists2();
-
-	//glPrint(0, 0, 0, "Hello, world!");
-	//glPrintV(0, 0, 0, "Hello, world!", 0, 0, 0, 1, 0, 1);
-
-	//DrawSphere_(0, 0, 0, 2, 1, 1, 1, 0, 0, 0, false);
-	//DrawIcosahedron_(0, 0, 0, 2, 1, 0, 0, 0, 0, 0, false);
-	//DrawTeapot_(0, 0, 0, 2, 1, 0, 0, 0, 0, 0, false);
-	
-	
-	//glLoadIdentity();
-	//glTranslated(0, 3, 0);
-	
-	//CalcFPS();
-	//DrawFPS();
 }
 
 void DrawKox(int n, float x1, float y1, float x2, float y2)

@@ -91,57 +91,6 @@ void SCENE::Init()
 	items.push_back(new Line(get_VERTEX(0, -10, 0), get_VERTEX(0, 20, 0), get_COLOR(1, 1, 1), 1));
 	items.push_back(new Line(get_VERTEX(0, 0, -10), get_VERTEX(0, 0, 20), get_COLOR(1, 1, 1), 1));
 	
-	//Item * item;
-	/*
-	// points
-	items.push_back(new Point(get_VERTEX(0, 0, 0), get_COLOR(1, 1, 1), 10));
-	items.push_back(new Point(get_VERTEX(0, 1, 0), get_COLOR(1, 0, 0), 5));
-	items.push_back(new Point(get_VERTEX(0, -1, 0), get_COLOR(1, 0, 0), 5));
-	items.push_back(new Point(get_VERTEX(1, 0, 0), get_COLOR(0, 1, 0), 5));
-	items.push_back(new Point(get_VERTEX(-1, 0, 0), get_COLOR(0, 0, 1), 5));
-
-	// triangles
-	items.push_back(new Triangle(get_VERTEX(-0.5f, 0.2f, 0), get_VERTEX(0, 0.5f, 0), get_VERTEX(0.5f, 0.2f, 0), get_COLOR(0, 1, 0)));
-	items.push_back(new Triangle(get_VERTEX(-0.5f, -0.2f, 0), get_VERTEX(0, -0.5f, 0), get_VERTEX(0.5f, -0.2f, 0), get_COLOR(1, 0, 0), get_COLOR(0, 1, 0), get_COLOR(0, 0, 1)));
-	
-	// trianglest
-	items.push_back(new TriangleT(get_VERTEX(2, -2, 0), get_VERTEX(1, 0, 0), get_VERTEX(0.5f, -0.5f, 0), get_COLOR(0, 1, 0), "wall1.bmp", get_TEXTURE_VERTEX(0, 0), get_TEXTURE_VERTEX(1, 0), get_TEXTURE_VERTEX(0, 1)));
-	
-	// quad
-	items.push_back(new Quad(get_VERTEX(-2, -2, 0), get_VERTEX(-2, -1, 0), get_VERTEX(-1, -1, 0), get_VERTEX(-1, -2, 0), get_COLOR(1, 0, 0)));
-	items.push_back(new Quad(get_VERTEX(-2, 2, 0), get_VERTEX(-2, 1, 0), get_VERTEX(-1, 1, 0), get_VERTEX(-1, 2, 0), get_COLOR(1, 0, 0), get_COLOR(0, 1, 0), get_COLOR(0, 0, 1), get_COLOR(0, 1, 1)));
-	
-	// quadt
-	items.push_back(new QuadT(get_VERTEX(1, 1, 0), get_VERTEX(0, 1, 0), get_VERTEX(1, 1, 0), get_VERTEX(1, 0, 0), get_COLOR(1, 1, 1), "wall1.bmp", get_TEXTURE_VERTEX(0, 0), get_TEXTURE_VERTEX(0, 1), get_TEXTURE_VERTEX(1, 1), get_TEXTURE_VERTEX(1, 0)));
-	items.push_back(new QuadT(get_VERTEX(1, 2, 0), get_VERTEX(0, 1, 0), get_VERTEX(1, 1, 0), get_VERTEX(1, 0, 0), get_COLOR(1, 0, 0), "wall2.bmp", get_TEXTURE_VERTEX(0, 0), get_TEXTURE_VERTEX(0, 0.5), get_TEXTURE_VERTEX(0.5, 0.5), get_TEXTURE_VERTEX(0.5, 0)));
-	
-
-//	items.push_back(new Kub(get_VERTEX(1, 0, 0), 1, get_COLOR(1, 1, 1), 2, 0));
-//	items.push_back(new Shere(get_VERTEX(1, 0, 0), 2, get_COLOR(1, 1, 1), 1, 0));
-
-	// grid
-	//items.push_back(new Grid(get_VERTEX(0, 0, 0), 0.1f, 128*1 + 1, 128*1 + 1));
-	//InitLight();
-
-	// fractal kox
-//	items.push_back(new Fractal(get_VERTEX(-1, 0, 0), get_VERTEX(1, 0, 0), "kox", 7));
-//	items.push_back(new Fractal(get_VERTEX(1, 0, 0), get_VERTEX(0, -1.5, 0), "kox", 7));
-//	items.push_back(new Fractal(get_VERTEX(0, -1.5, 0), get_VERTEX(-1, 0, 0), "kox", 7));
-	
-	// fractal levi
-//	items.push_back(new Fractal(get_VERTEX(-1, 0, 0), get_VERTEX(1, 0, 0), "levi", 10));
-
-	//mondelbrot
-	//items.push_back(new Fractal(get_VERTEX(0, 0, 0), get_VERTEX(0, 0, 0), "mondelbrot", 10));
-	
-	//LS 1
-	//items.push_back(new FractalLS(get_VERTEX(0, 0, 0), 5, 5, 1, "F++F++F", "F", "F-F++F-F"));
-	//items.push_back(new FractalLS(get_VERTEX(0, 0, 0), 5, 5, 1, "F--F--F+++F++F++F", "F", "F-F++F-F"));
-	//items.push_back(new FractalLS(get_VERTEX(0, 0, 0), 10, 10000, 2, "FX", "X", "X+YF", "Y", "FX-Y"));
-	//items.push_back(new FractalLS(get_VERTEX(0, 0, 0), 4, 10, 1, "FL", "F", "", "L", "FL-FR--FR+FL++FLFL+FR-", "R", "+FL-FRFR--FR-FL++FL+FR"));
-	//items.push_back(new FractalLS(get_VERTEX(0, 0, 0), 8, 50, 3, "X", "F", "FF", "X", "F[+X]F[-X]+X"));
-	//items.push_back(new FractalLS(get_VERTEX(0, 0, 0), 12, 200000, 4, "X", "X", "F2[-X]+X1"));
-	//items.push_back(new FractalLS(get_VERTEX(0, 0, 0), 5, 20, 2, "X", "X", "-YF+XFX+FY-", "Y", "+XF-YFY-FX+"));*/
 }
 
 GLuint SCENE::GetTextureIndex(string name)

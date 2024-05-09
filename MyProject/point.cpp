@@ -19,18 +19,6 @@ Point::Point(VERTEX pos, COLOR color, float size)
 void Point::Draw()
 {
 	DrawRound(pos, size/100, color);
-	/*glEnable(GL_BLEND);
-	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-	glEnable(GL_POINT_SMOOTH);
-	glPointSize(size);
-	glColor3d(color.r, color.g, color.b);
-	glPushMatrix();
-	glTranslated(pos.x, pos.y, pos.z);
-	glBegin(GL_POINTS);
-	glVertex3d(0, 0, 0);
-	glEnd();
-	glPopMatrix();
-	glDisable(GL_BLEND);*/
 
 }
 

@@ -1,0 +1,40 @@
+<scene>
+  <item Name="Point">
+    <Angle>0.0,0.0,0.0</Angle>
+    <Color>0.0,0.50,0.0</Color>
+    <Name>Point</Name>
+    <Pos>0.0,0.0,0.0</Pos>
+    <Size>20.0</Size>
+    <v>0.0,0.0,0.0</v>
+  </item>
+  <item Name="Point">
+    <Angle>0.0,0.0,0.0</Angle>
+    <Color>0.0,0.50,0.0</Color>
+    <Name>Point</Name>
+    <Pos>1.0,0.0,0.0</Pos>
+    <Size>20.0</Size>
+    <v>0.0,0.0,0.0</v>
+  </item>
+  <item Name="Point">
+    <Angle>0.0,0.0,0.0</Angle>
+    <Color>1.0,0.0,0.0</Color>
+    <Name>Point</Name>
+    <Pos>-1.0,0.0,0.0</Pos>
+    <Size>20.0</Size>
+    <v>0.0,0.0,0.0</v>
+  </item>
+  <item Name="Quad">
+    <Angle>0.0,0.0,0.0</Angle>
+    <Color>1.0,1.0,1.0</Color>
+    <Color2>1.0,1.0,1.0</Color2>
+    <Color3>1.0,1.0,1.0</Color3>
+    <Color4>1.0,1.0,0.0</Color4>
+    <Name>Quad</Name>
+    <Pos>0.0,0.0,0.0</Pos>
+    <Pos2>0.0,1.0,0.0</Pos2>
+    <Pos3>1.0,1.0,0.0</Pos3>
+    <Pos4>2.0,0.0,0.0</Pos4>
+    <Size>1.0</Size>
+    <v>0.0,0.0,0.0</v>
+  </item>
+</scene>

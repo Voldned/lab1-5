@@ -1,0 +1,50 @@
+<scene>
+  <item Name="Particles">
+    <Angle>0.0,0.0,0.0</Angle>
+    <Color>1.0,1.0,1.0</Color>
+    <Count>10</Count>
+    <Name>Particles</Name>
+    <Pos>0.0,0.0,0.0</Pos>
+    <Size>10.0</Size>
+    <Speed>1.0</Speed>
+    <Time>1000</Time>
+    <dV>0.10,0.20,0.10</dV>
+    <v>0.0,1.0,0.0</v>
+  </item>
+  <item Name="Particles">
+    <Angle>0.0,0.0,0.0</Angle>
+    <Color>1.0,1.0,0.0</Color>
+    <Count>10</Count>
+    <Name>Particles</Name>
+    <Pos>0.0,0.0,0.0</Pos>
+    <Size>10.0</Size>
+    <Speed>1.0</Speed>
+    <Time>1000</Time>
+    <dV>0.10,0.20,0.10</dV>
+    <v>0.0,-1.0,0.0</v>
+  </item>
+  <item Name="Particles">
+    <Angle>0.0,0.0,0.0</Angle>
+    <Color>1.0,0.0,1.0</Color>
+    <Count>10</Count>
+    <Name>Particles</Name>
+    <Pos>0.0,0.0,0.0</Pos>
+    <Size>10.0</Size>
+    <Speed>1.0</Speed>
+    <Time>1000</Time>
+    <dV>0.10,0.20,0.10</dV>
+    <v>1.0,0.0,0.0</v>
+  </item>
+  <item Name="Particles">
+    <Angle>0.0,0.0,0.0</Angle>
+    <Color>1.0,0.0,0.0</Color>
+    <Count>10</Count>
+    <Name>Particles</Name>
+    <Pos>0.0,0.0,0.0</Pos>
+    <Size>10.0</Size>
+    <Speed>1.0</Speed>
+    <Time>1000</Time>
+    <dV>0.10,0.02,0.10</dV>
+    <v>-1.0,0.0,0.0</v>
+  </item>
+</scene>

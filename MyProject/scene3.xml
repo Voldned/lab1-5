@@ -1,0 +1,48 @@
+<scene>
+  <item Name="Puzzle">
+    <Angle>0.0,0.0,0.0</Angle>
+    <Color>1.0,1.0,1.0</Color>
+    <Color2>1.0,1.0,1.0</Color2>
+    <Color3>1.0,1.0,1.0</Color3>
+    <Color4>1.0,1.0,1.0</Color4>
+    <Name>Puzzle</Name>
+    <Pos>-1.0,-1.0,-1.0</Pos>
+    <Pos2>-2.0,0.0,0.0</Pos2>
+    <Pos3>0.0,0.0,0.0</Pos3>
+    <Pos4>0.0,-2.0,0.0</Pos4>
+    <Size>1.0</Size>
+    <TexCoord>0.0,0.0</TexCoord>
+    <TexCoord2>0.0,1.0</TexCoord2>
+    <TexCoord3>1.0,1.0</TexCoord3>
+    <TexCoord4>1.0,0.0</TexCoord4>
+    <Texture>W1.bmp</Texture>
+    <col>3</col>
+    <height>10</height>
+    <row>3</row>
+    <v>-431602080.0,-431602080.0,-431602080.0</v>
+    <width>10</width>
+  </item>
+  <item Name="Puzzle">
+    <Angle>0.0,0.0,0.0</Angle>
+    <Color>1.0,1.0,1.0</Color>
+    <Color2>1.0,1.0,1.0</Color2>
+    <Color3>1.0,1.0,1.0</Color3>
+    <Color4>1.0,1.0,1.0</Color4>
+    <Name>Puzzle</Name>
+    <Pos>-1.0,-1.0,1.0</Pos>
+    <Pos2>-2.0,0.0,0.0</Pos2>
+    <Pos3>0.0,0.0,0.0</Pos3>
+    <Pos4>0.0,-2.0,0.0</Pos4>
+    <Size>1.0</Size>
+    <TexCoord>0.0,0.0</TexCoord>
+    <TexCoord2>0.0,1.0</TexCoord2>
+    <TexCoord3>1.0,1.0</TexCoord3>
+    <TexCoord4>1.0,0.0</TexCoord4>
+    <Texture>W1.bmp</Texture>
+    <col>3</col>
+    <height>10</height>
+    <row>3</row>
+    <v>-431602080.0,-431602080.0,-431602080.0</v>
+    <width>10</width>
+  </item>
+</scene>

@@ -38,6 +38,7 @@ private:
 	void PressKeyX(void); // шаг вниз
 	void PressKeyR(void); // смотреть вверх
 	void PressKeyT(void); // смотреть вниз
+	void PressKeyF(void); // смотреть вни
 #endif
 	bool ismousedown;
 	bool ctrlPressed;

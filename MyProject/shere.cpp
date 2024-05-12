@@ -67,21 +67,21 @@ void Shere::Init()
 	lines.clear();
 	quads.clear();
    //  формирование точек
-	for (l = 0; l < N; l++)
-	for (j = 0; j < N; j++)
-	{
-		a = j*da;
-		b = l*da / 2;
-		x = R * sin(a)*sin(b);
-		y = R * cos(b);
-		z = R * cos(a)*sin(b);
-		points.push_back(get_VERTEX(x+pos.x, y+pos.y, z+pos.z));
-	}
+	for (unsigned l = 0; l < N; l++)
+		for (unsigned j = 0; j < N; j++)
+		{
+			a = j*da;
+			b = l*da / 2;
+			x = R * sin(a)*sin(b);
+			y = R * cos(b);
+			z = R * cos(a)*sin(b);
+			points.push_back(get_VERTEX(x+pos.x, y+pos.y, z+pos.z));
+		}
 
    //  формирование горизонтальных линий
-	for (l = 0; l < N; l++)
+	for (unsigned l = 0; l < N; l++)
 	{
-		for (j = 0; j < N - 1; j++)
+		for (unsigned j = 0; j < N - 1; j++)
 		{
 			lines.push_back(get_LINE(j + l*N, j + 1 + l*N));
 		}
@@ -89,16 +89,16 @@ void Shere::Init()
 	}
 
 //  формирование вертикальных линий
-	for (l = 0; l < N - 1; l++)
-	for (j = 0; j < N; j++)
-	{
-		lines.push_back(get_LINE(j + l*N, j + N + l*N));
-	}
+	for (unsigned l = 0; l < N - 1; l++)
+		for (unsigned j = 0; j < N; j++)
+		{
+			lines.push_back(get_LINE(j + l*N, j + N + l*N));
+		}
 
 //  формирование полигонов
-	for (j = 0; j < N-1; j++)
+	for (unsigned j = 0; j < N-1; j++)
 	{
-		for (l = 0; l < N - 1; l++)
+		for (unsigned l = 0; l < N - 1; l++)
 		{
 			quads.push_back(get_QUAD(l + j*N, l + 1 + j*N, l + N + 1 + j*N, l + N + j*N));
 		}

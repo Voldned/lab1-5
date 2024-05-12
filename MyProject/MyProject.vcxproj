@@ -79,6 +79,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="camera.cpp" />
+    <ClCompile Include="cone.cpp" />
+    <ClCompile Include="cylinder.cpp" />
     <ClCompile Include="drawfunctions.cpp" />
     <ClCompile Include="fractal.cpp" />
     <ClCompile Include="fractalLS.cpp" />
@@ -103,6 +105,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="camera.h" />
+    <ClInclude Include="cone.h" />
+    <ClInclude Include="cylinder.h" />
     <ClInclude Include="fractal.h" />
     <ClInclude Include="fractalLS.h" />
     <ClInclude Include="GLAUX.H" />
@@ -120,6 +124,7 @@
     <ClInclude Include="puzzle.h" />
     <ClInclude Include="quad.h" />
     <ClInclude Include="quadt.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="shere.h" />
     <ClInclude Include="textures.h" />
     <ClInclude Include="triangle.h" />
@@ -133,6 +138,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MyProject.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

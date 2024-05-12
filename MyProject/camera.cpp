@@ -22,7 +22,7 @@ void Camera::Init()
 	ax = 0; ay = 0; az = 0;
 #endif
 #ifdef CAMERA1
-	eX = 1; eY = 1; eZ = 10;
+	eX = 0; eY = 0; eZ = -10;
 	aX = 0; aY = 0; aZ = 0;
 	moveK = 0.02f;
 #endif
@@ -120,14 +120,14 @@ void Camera::PressKeyS(void) // шаг назад
 
 void Camera::PressKeyE(void) // смотреть направо
 {
-	float a = 3.14f / 180 * 2;
+	float a = 3.14f / 180;
 	float cx_ = float((aX - eX)*cos(a) - (aZ - eZ)*sin(a));
 	float cz_ = float((aX - eX)*sin(a) + (aZ - eZ)*cos(a));
 	aX = cx_ + eX;  aZ = cz_ + eZ;
 }
 void Camera::PressKeyQ(void)// смотреть налево
 {
-	float a = -3.14f / 180 * 2;
+	float a = -3.14f / 180;
 	float cx_ = float((aX - eX)*cos(a) - (aZ - eZ)*sin(a));
 	float cz_ = float((aX - eX)*sin(a) + (aZ - eZ)*cos(a));
 	aX = cx_ + eX;   aZ = cz_ + eZ;
@@ -135,17 +135,22 @@ void Camera::PressKeyQ(void)// смотреть налево
 
 void Camera::PressKeyR(void) // смотреть вверх
 {
-	float a = 3.14f / 180 * 0.5;
+	float a = 3.14f / 180;
 	float cy_ = float((aY - eY)*cos(a) - (aZ - eZ)*sin(a));
 	float cz_ = float((aY - eY)*sin(a) + (aZ - eZ)*cos(a));
 	aY = cy_ + eY;  aZ = cz_ + eZ;
 }
 void Camera::PressKeyT(void)// смотреть вниз
 {
-	float a = -3.14f / 180 * 0.5;
+	float a = -3.14f / 180;
 	float cy_ = float((aY - eY)*cos(a) - (aZ - eZ)*sin(a));
 	float cz_ = float((aY - eY)*sin(a) + (aZ - eZ)*cos(a));
 	aY = cy_ + eY;   aZ = cz_ + eZ;
+}
+
+void Camera::PressKeyF(void)// смотреть вниз
+{
+	aY = 0;   aZ = 0;	aX = 0;
 }
 
 void Camera::PressKeyZ(void)// шаг вверх
@@ -179,6 +184,10 @@ void Camera::KeyDown(int KeyCode)
 	case 'z': PressKeyZ();
 		break;
 	case 'x': PressKeyX();
+		break;
+	case 'r': PressKeyR();
+		break;
+	case 't': PressKeyT();
 		break;
 	default:
 		break;
@@ -230,7 +239,6 @@ void Camera::MouseMove(float x, float y)
 				PressKeyQ();
 			if (x>mousedownpos.x)
 				PressKeyE();
-
 			if (y<mousedownpos.y)
 				PressKeyR();
 			if (y>mousedownpos.y)

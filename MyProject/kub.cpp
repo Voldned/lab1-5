@@ -71,18 +71,24 @@ void Kub::Init()
 	points.push_back(get_VERTEX(x0 + dx, y0 + dy, z0 + dz));
 	points.push_back(get_VERTEX(x0, y0 + dy, z0 + dz));
 
+
+
 	lines.push_back(get_LINE(0, 1));
 	lines.push_back(get_LINE(1, 2));
 	lines.push_back(get_LINE(2, 3));
 	lines.push_back(get_LINE(0, 3));
+
 	lines.push_back(get_LINE(4, 5));
 	lines.push_back(get_LINE(5, 6));
 	lines.push_back(get_LINE(6, 7));
-	lines.push_back(get_LINE(4, 7));
+	lines.push_back(get_LINE(7, 4));
+
 	lines.push_back(get_LINE(0, 4));
 	lines.push_back(get_LINE(1, 5));
 	lines.push_back(get_LINE(2, 6));
 	lines.push_back(get_LINE(3, 7));
+
+
 
 	quads.push_back(get_QUAD(0, 3, 2, 1));
 	quads.push_back(get_QUAD(1, 2, 6, 5));

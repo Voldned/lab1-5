@@ -14,7 +14,7 @@ Point::Point(VERTEX pos, COLOR color, float size)
 	SetSize(size);
 	SetName("Point");
 	v = vrZero;
-}
+} 
 
 void Point::Draw()
 {

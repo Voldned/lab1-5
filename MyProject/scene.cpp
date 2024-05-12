@@ -24,6 +24,8 @@
 #include "puzzle.h"
 #include "particles.h"
 #include "drawfunctions.h"
+#include "cylinder.h"
+#include "cone.h"
 
 #using <System.Xml.dll>
 #using <System.dll>
@@ -77,16 +79,19 @@ void SCENE::Init()
 
 	textures = new TexturesList();
 
-	textures->LoadTexture("picts/wall1.bmp");
-	textures->LoadTexture("picts/wall2.bmp");
+	//textures->LoadTexture("picts/wall1.bmp");
+	//textures->LoadTexture("picts/wall2.bmp");
 	textures->LoadTexture("picts/Grass32.bmp");
 	textures->LoadTexture("picts/W1.bmp");
+	textures->LoadTexture("picts/fir_tree_2pow.bmp");
 
 	// os
-	items.push_back(new Line(get_VERTEX(-10, 0, 0), get_VERTEX(20, 0, 0), get_COLOR(1, 1, 1), 1));
-	items.push_back(new Line(get_VERTEX(0, -10, 0), get_VERTEX(0, 20, 0), get_COLOR(1, 1, 1), 1));
-	items.push_back(new Line(get_VERTEX(0, 0, -10), get_VERTEX(0, 0, 20), get_COLOR(1, 1, 1), 1));
+	//items.push_back(new Line(get_VERTEX(-10, 0, 0), get_VERTEX(20, 0, 0), get_COLOR(1, 1, 1), 1));
+	//items.push_back(new Line(get_VERTEX(0, -10, 0), get_VERTEX(0, 20, 0), get_COLOR(1, 1, 1), 1));
+	//items.push_back(new Line(get_VERTEX(0, 0, -10), get_VERTEX(0, 0, 20), get_COLOR(1, 1, 1), 1));
 	
+	items.push_back(new Kub(get_VERTEX(0, -2, 0), 1, clWhite, 3, 1));
+	items.push_back(new Cone(get_VERTEX(0, 0, 0), 1, clWhite, 2, 1));
 }
 
 GLuint SCENE::GetTextureIndex(string name)
@@ -159,6 +164,7 @@ vector <string> SCENE::GetTypesNames()
 	result.push_back("QuadT");
 	result.push_back("Shere");
 	result.push_back("Kub");
+	result.push_back("Cylinder");
 
 	result.push_back("Puzzle");
 	result.push_back("Particles");
@@ -195,6 +201,8 @@ void SCENE::AddItem(string name)
 		items.push_back(new Shere(get_VERTEX(0, 0, 0), 10,clWhite, 1, 1));
 	if (name == "Kub")
 		items.push_back(new Kub(get_VERTEX(0, 0, 0), 10, clWhite, 1, 1));
+	if (name == "Cylinder")
+		items.push_back(new Cylinder(get_VERTEX(0, 0, 0), 1, clWhite, 1, 1));
 }
 
 void SCENE::Clear()

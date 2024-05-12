@@ -56,11 +56,9 @@ void Item3D::Draw()
 	if ((drawtype==3))
 	{
 		for (unsigned i = 0; i<triangles.size(); i++)
-			DrawTriangleT(points[triangles[i].p1], points[triangles[i].p2], points[triangles[i].p3], get_COLOR(1, 1, 1),
-			get_TEXTURE_VERTEX(0, 0), get_TEXTURE_VERTEX(0.5, 1), get_TEXTURE_VERTEX(1, 0), tindex);
+			DrawTriangleT(points[triangles[i].p1], points[triangles[i].p2], points[triangles[i].p3], get_COLOR(1, 1, 1), get_TEXTURE_VERTEX(0, 0), get_TEXTURE_VERTEX(0.5, 1), get_TEXTURE_VERTEX(1, 0), tindex);
 		for (unsigned i = 0; i<quads.size(); i++)
-			DrawQuadT(points[quads[i].p1], points[quads[i].p2], points[quads[i].p3], points[quads[i].p4],
-					 get_COLOR(1, 1, 1), tindex);
+			DrawQuadT(points[quads[i].p1], points[quads[i].p2], points[quads[i].p3], points[quads[i].p4], get_COLOR(1, 1, 1), tindex);
 	}
 	if ((drawtype==4))
 	{
@@ -69,9 +67,6 @@ void Item3D::Draw()
 		for (unsigned i = 0; i<quads.size(); i++)
 			DrawQuadNormal(points[quads[i].p1], points[quads[i].p2], points[quads[i].p3],	points[quads[i].p4], 
 			color);
-
-	/*	for (unsigned i = 0; i<lines.size(); i++)
-			DrawLine(points[lines[i].p1], points[lines[i].p2], get_COLOR(0, 0, 0), 2);*/
 	}
 	if ((drawtype==5))
 	{
@@ -79,9 +74,6 @@ void Item3D::Draw()
 		for (unsigned i = 0; i<quads.size(); i++)
 			DrawQuadNormalT(points[quads[i].p1], points[quads[i].p2], points[quads[i].p3],	points[quads[i].p4], 
 			color, tindex);
-
-	/*	for (unsigned i = 0; i<lines.size(); i++)
-			DrawLine(points[lines[i].p1], points[lines[i].p2], get_COLOR(0, 0, 0), 2);*/
 	}
 	glPopMatrix();
 }

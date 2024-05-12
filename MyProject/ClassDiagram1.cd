@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Fractal" Collapsed="true">
+    <Position X="1.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAgAAAAAAAAAAAAABACAAAAAAAAAAAAI=</HashCode>
+      <FileName>fractal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FractalLS" Collapsed="true">
+    <Position X="4.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAgAAAAIAAAAAAIAAACAAAAACAAA2gBA=</HashCode>
+      <FileName>fractalLS.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Item" Collapsed="true">
+    <Position X="9.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIAECAAAAAAIAkCAAIAIAIgEAAAEEACAAIgDSADABAA=</HashCode>
+      <FileName>item.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Item3D">
+    <Position X="9.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACACAAFACAgAAAAAggQAAAAIAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>item3d.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kub">
+    <Position X="6.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>kub.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Grid">
+    <Position X="4.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAACAAAAAAAgAAAEAgAAAAAAAAAACQAAAAAA=</HashCode>
+      <FileName>grid.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Line" Collapsed="true">
+    <Position X="14.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAgAAAAAAAAAAAAAAAACAAAABAAABAAI=</HashCode>
+      <FileName>line.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Particles" Collapsed="true">
+    <Position X="17.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEACAAAACAASwAAACgAAAAAAAABAQAAYAALQAAAAAA=</HashCode>
+      <FileName>particles.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Point" Collapsed="true">
+    <Position X="15.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAKAAggCAAAAgAAACAAAAAAAAIBADAAAAAAA=</HashCode>
+      <FileName>point.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Puzzle">
+    <Position X="13.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAEAEAAgkYYQAAAAQACAQRQEAIAAAADAACEAAQ=</HashCode>
+      <FileName>puzzle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Quad" Collapsed="true">
+    <Position X="13.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAgAAAAAAAAAAAAAAAACAAAABAAEACAA=</HashCode>
+      <FileName>quad.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuadT" Collapsed="true">
+    <Position X="13.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAgAAAAAAAAAgAAAAAAAAAAABEAAAAQA=</HashCode>
+      <FileName>quadt.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shere">
+    <Position X="12.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>shere.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Triangle" Collapsed="true">
+    <Position X="14.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAgABAAAAAAAAAAAAAACAAAABAAAAAAE=</HashCode>
+      <FileName>triangle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TriangleT" Collapsed="true">
+    <Position X="15.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAgABAAAAAAAgAAAAAAAAAAABAAAAAQA=</HashCode>
+      <FileName>trianglet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

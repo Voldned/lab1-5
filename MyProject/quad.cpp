@@ -25,14 +25,15 @@ Quad::Quad(VERTEX pos1, VERTEX pos2, VERTEX pos3, VERTEX pos4, COLOR color, COLO
 void Quad::Draw()
 {
 	glPushMatrix();
-	glTranslated(pos.x, pos.y, pos.z);
+//	glTranslated(pos.x, pos.y, pos.z);
 	glRotated(angle.x, 1, 0, 0);
 	glRotated(angle.y, 0, 1, 0);
 	glRotated(angle.z, 0, 0, 1);
 	glScaled(size, size, size);
 	glBegin(GL_QUADS);
 		glColor3d(color.r, color.g, color.b);
-		glVertex3d(0, 0, 0);
+	//	glVertex3d(0, 0, 0);
+		glVertex3d(pos.x, pos.y, pos.z);
 		glColor3d(color2.r, color2.g, color2.b);
 		glVertex3d(pos2.x, pos2.y, pos2.z);
 		glColor3d(color3.r, color3.g, color3.b);

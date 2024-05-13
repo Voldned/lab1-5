@@ -22,7 +22,7 @@ void Camera::Init()
 	ax = 0; ay = 0; az = 0;
 #endif
 #ifdef CAMERA1
-	eX = 0; eY = 0; eZ = -10;
+	eX = 0; eY = 40; eZ = -80;
 	aX = 0; aY = 0; aZ = 0;
 	moveK = 0.02f;
 #endif

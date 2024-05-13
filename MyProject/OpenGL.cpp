@@ -55,16 +55,7 @@ using namespace System::Windows::Forms;
 	{
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);	// Clear screen and depth buffer
 		glLoadIdentity();									// Reset the current modelview matrix
-		/*glTranslated(0, 0, -10);
 
-		glRotated(GetTickCount()/100.f, 0, 0, 1);
-	glColor3d(1, 1, 1);
-    glBegin(GL_QUADS);
-		glVertex3d(-1, -1, 0);
-		glVertex3d(-1, 1, 0);
-		glVertex3d(1, 1, 0);
-		glVertex3d(1, -1, 0);
-    glEnd();*/
 		if (camera != nullptr)	camera->SetCamera();
 		if (scene != nullptr)	scene->Draw();
 

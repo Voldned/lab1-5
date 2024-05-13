@@ -923,3 +923,12 @@ void DrawMondelbrot()
   glEnd();
  }
 
+void DrawPine(VERTEX v)
+{
+
+}
+
+void DrawForest()
+{
+
+}

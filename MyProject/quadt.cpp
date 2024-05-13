@@ -40,7 +40,7 @@ void QuadT::Draw()
 		glBindTexture(GL_TEXTURE_2D, tindex);
 
 		glPushMatrix();
-		glTranslated(pos.x, pos.y, pos.z);
+		///glTranslated(pos.x, pos.y, pos.z);
 		glRotated(angle.x, 1, 0, 0);
 		glRotated(angle.y, 0, 1, 0);
 		glRotated(angle.z, 0, 0, 1);
@@ -48,7 +48,7 @@ void QuadT::Draw()
 		glBegin(GL_QUADS);
 			glColor3d(color.r, color.g, color.b);
 			glTexCoord2f(tv1.x, tv1.y);
-			glVertex3d(0, 0, 0);
+			glVertex3d(pos.x, pos.y, pos.z);
 			glColor3d(color2.r, color2.g, color2.b);
 			glTexCoord2f(tv2.x, tv2.y); 
 			glVertex3d(pos2.x, pos2.y, pos2.z);

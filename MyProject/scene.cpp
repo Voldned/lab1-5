@@ -37,10 +37,13 @@ using namespace System::Xml;
 using namespace System::Runtime::InteropServices;
 
 
+
    GLfloat mat_specular[]={1.0,1.0,1.0,1.0};
    GLfloat mat_shininess[]={50.0};
    GLfloat light_position[]={2.0,2.0,0.0,0.0};
    GLfloat white_light[]={1.0,1.0,1.0,1.0};
+
+
 
 SCENE::SCENE(int width, int height)
 {
@@ -77,27 +80,35 @@ void SCENE::Init()
 	BuildFont();
 	BuildVERTEXFont();
 
+	unsigned n = 100;
 	textures = new TexturesList();
+	vector<VERTEX> cords;
+	for (unsigned i = 0; i <= n; i += 1)
+		cords.push_back(get_VERTEX(random(-90, 90), 0, random(-90, 90)));
 
-	//textures->LoadTexture("picts/wall1.bmp");
-	//textures->LoadTexture("picts/wall2.bmp");
-	textures->LoadTexture("picts/Grass32.bmp");
-	textures->LoadTexture("picts/W1.bmp");
+	textures->LoadTexture("picts/tree.bmp");
 	textures->LoadTexture("picts/fir_tree_2pow.bmp");
+	textures->LoadTexture("picts/snow.bmp");
+	//textures->LoadTexture("picts/W1.bmp");
+	//textures->LoadTexture("picts/fir_tree_2pow.bmp");
 
 	// os
 	//items.push_back(new Line(get_VERTEX(-10, 0, 0), get_VERTEX(20, 0, 0), get_COLOR(1, 1, 1), 1));
 	//items.push_back(new Line(get_VERTEX(0, -10, 0), get_VERTEX(0, 20, 0), get_COLOR(1, 1, 1), 1));
 	//items.push_back(new Line(get_VERTEX(0, 0, -10), get_VERTEX(0, 0, 20), get_COLOR(1, 1, 1), 1));
 	
-	items.push_back(new Kub(get_VERTEX(0, -2, 0), 1, clWhite, 3, 1));
-	items.push_back(new Cone(get_VERTEX(0, 0, 0), 1, clWhite, 2, 1));
+	//items.push_back(new Kub(get_VERTEX(0, -2, 0), 1, clWhite, 3, 1));
+	//items.push_back(new Cone(get_VERTEX(0, 0, 0), 1, clWhite, 2, 1));
+
+	items.push_back(new QuadT(get_VERTEX(-200, 0, 200), get_VERTEX(-200, 0, -200), get_VERTEX(200, 0, -200), get_VERTEX(200, 0, 200), get_COLOR(1, 1, 1), "snow.bmp", get_TEXTURE_VERTEX(0, 0), get_TEXTURE_VERTEX(0, 1), get_TEXTURE_VERTEX(1, 1), get_TEXTURE_VERTEX(1, 0)));
+	for (unsigned i = 0; i <= n; i += 1)
+		if (random(0, 1) > 0.5)
+			DrawPine1(cords[i], random(0.4, 0.8));
+		else
+			DrawPine2(cords[i], random(0.4, 0.8));
 }
 
-GLuint SCENE::GetTextureIndex(string name)
-{
-	return textures->GetTextureIndex(name);
-}
+
 
 void SCENE::Draw()
 {
@@ -117,6 +128,26 @@ void SCENE::Draw()
 	DrawFPS();
 }
 
+void SCENE::DrawPine1(VERTEX v, float size)
+{
+	items.push_back(new Cylinder(get_VERTEX(v.x, v.y, v.z), 1, clWhite, 3, 1));
+	items.push_back(new Cone(get_VERTEX(v.x, v.y + 2, v.z), 2, clWhite, 3, 2));
+}
+
+void SCENE::DrawPine2(VERTEX v, float size)
+{
+	items.push_back(new Cylinder(get_VERTEX(v.x, v.y, v.z), size, clWhite, 3, 1));
+	items.push_back(new Cone(get_VERTEX(v.x, v.y + size * 3, v.z), size * 2, clWhite, 3, 2));
+	items.push_back(new Cone(get_VERTEX(v.x, v.y + size * 6, v.z), size * 2, clWhite, 3, 2));
+}
+
+
+
+GLuint SCENE::GetTextureIndex(string name)
+{
+	return textures->GetTextureIndex(name);
+}
+
 map<int, string> SCENE::GetItemsNames()
 {
 	map<int, string> result;
@@ -130,6 +161,25 @@ map<string, string> SCENE::GetPropertisByIndex(int index)
 	map<string, string> result;
 	if ((index > -1) && (index < items.size()))
 		return items[index]->GetProperties();
+
+	return result;
+}
+
+vector <string> SCENE::GetTypesNames()
+{
+	vector <string> result;
+	result.push_back("Point");
+	result.push_back("Line");
+	result.push_back("Triangle");
+	result.push_back("TriangleT");
+	result.push_back("Quad");
+	result.push_back("QuadT");
+	result.push_back("Shere");
+	result.push_back("Kub");
+	result.push_back("Cylinder");
+
+	result.push_back("Puzzle");
+	result.push_back("Particles");
 
 	return result;
 }
@@ -153,24 +203,7 @@ bool SCENE::ItemIsVisible(int index)
 	return 0;
 }
 
-vector <string> SCENE::GetTypesNames()
-{
-	vector <string> result;
-	result.push_back("Point");
-	result.push_back("Line");
-	result.push_back("Triangle");
-	result.push_back("TriangleT");
-	result.push_back("Quad");
-	result.push_back("QuadT");
-	result.push_back("Shere");
-	result.push_back("Kub");
-	result.push_back("Cylinder");
 
-	result.push_back("Puzzle");
-	result.push_back("Particles");
-
-	return result;
-}
 
 void SCENE::AddItem(string name)
 {
@@ -203,6 +236,9 @@ void SCENE::AddItem(string name)
 		items.push_back(new Kub(get_VERTEX(0, 0, 0), 10, clWhite, 1, 1));
 	if (name == "Cylinder")
 		items.push_back(new Cylinder(get_VERTEX(0, 0, 0), 1, clWhite, 1, 1));
+	if (name == "Cone")
+		items.push_back(new Cone(get_VERTEX(0, 0, 0), 1, clWhite, 1, 1));
+
 }
 
 void SCENE::Clear()
@@ -220,6 +256,7 @@ void SCENE::DeleteItem(int index)
 		items.erase(items.begin()+index);
 	}
 }
+
 void SCENE::CloneItem(int index)
 {
 	if ((index>-1) && (index<items.size()))
@@ -236,6 +273,8 @@ void SCENE::CloneItem(int index)
 
 	}
 }
+
+
 
 string SystemToStl(String ^s)
 {
